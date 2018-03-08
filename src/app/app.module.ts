@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import { PromoAttivePage } from '../pages/promo-attive/promo-attive';
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
 import { LoginPage } from '../pages/login/login';
+import { EsercentiPage } from '../pages/esercenti/esercenti';
 
 import { IonicPageModule } from 'ionic-angular';
 
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     PromoAttivePage,
     TabsControllerPage,
-    LoginPage
+    LoginPage,
+    EsercentiPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     PromoAttivePage,
     TabsControllerPage,
-    LoginPage
+    LoginPage,
+    EsercentiPage
   ],
   providers: [
     StatusBar,
