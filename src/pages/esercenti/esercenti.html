@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Esercenti
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding id="page6">
+    <ion-list id="esercenti-list">
+        <ion-item color="none" id="esercenti-list-item12" *ngFor="let esercente of esercentiArray">
+         {{esercente.nome}}  ---  Indirizzo: {{esercente.indirizzo}} 
+          <button ion-button block (click)="apriUrl(esercente.sitoWeb)">SITO</button>
+        </ion-item>
+      </ion-list>
+  </ion-content> 

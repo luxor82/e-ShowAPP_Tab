@@ -33,7 +33,6 @@ export class PromoAttivePage {
         'crediti': 8
       }
     ];
-    
   }
 
   showAlert(text){
