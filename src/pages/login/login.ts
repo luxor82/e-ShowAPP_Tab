@@ -31,18 +31,15 @@ export class LoginPage {
   register(){
     this.submitAttempt = true;
 
-/*    if(!this.loginForm.valid && (this.formdata.p_password!="consis") && (this.formdata.p_email!="lucio.merre@consis.eu")){
+   if(!this.loginForm.valid && (this.formdata.p_password!="consis") && (this.formdata.p_email!="lucio.merre@consis.eu")){
       this.showAlert("Dati inseriti non corretti!");
     }
     else {
-  */
       console.log("login success!");
       console.log(this.loginForm.value);
       console.log(this.formdata);
       this.goToHome([]);
-      /*
     }  
-    */
   }
 
   goToHome(params){
