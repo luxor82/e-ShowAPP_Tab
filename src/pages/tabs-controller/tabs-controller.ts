@@ -49,6 +49,6 @@ export class TabsControllerPage {
   }
 
   goToMyPage() {
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.setRoot(LoginPage);
   }
 }
