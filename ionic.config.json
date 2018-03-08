@@ -1,6 +1,6 @@
 {
   "name": "e-ShowAPP_Tab",
-  "app_id": "",
+  "app_id": "65d18701",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
