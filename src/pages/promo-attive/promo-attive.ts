@@ -50,8 +50,10 @@ export class PromoAttivePage {
   }
 
   presentProfileModal(promoID) {
-    let profileModal = this.modalCtrl.create(EsercentiPage, {promoId: promoID} );
+    let profileModal = this.modalCtrl.create(EsercentiPage, {promoId: promoID},{cssClass: "mymodal", showBackdrop: false, enableBackdropDismiss: false} );
+    profileModal.onDidDismiss(data => {
+      console.log(data);
+    });
     profileModal.present();
   }
-    
 }

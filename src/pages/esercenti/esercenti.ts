@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { NavParams } from 'ionic-angular';
+import { ViewController, NavParams } from 'ionic-angular';
 
 
 @Component({
@@ -9,12 +9,13 @@ import { NavParams } from 'ionic-angular';
   templateUrl: 'esercenti.html'
 })
 export class EsercentiPage {
-    esercentiArray: any;
+  esercentiArray: any;
   text: any;
 
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  constructor(public navCtrl: NavController, public alerCtrl:AlertController, public params:NavParams) {
+  constructor(public navCtrl: NavController, public alerCtrl:AlertController, public params:NavParams, public viewCtrl: ViewController) {
+
     if (params.get('promoId')==1){
         this.esercentiArray = [
             {
@@ -97,4 +98,7 @@ export class EsercentiPage {
     alert.present();
   }
     
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
 }

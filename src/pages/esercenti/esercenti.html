@@ -1,15 +1,20 @@
 <ion-header>
     <ion-navbar>
+      <ion-buttons start>
+          <button ion-button (click)="dismiss()">Chiudi</button>
+        </ion-buttons>
       <ion-title>
         Esercenti
       </ion-title>
     </ion-navbar>
-  </ion-header>
-  <ion-content padding id="page6">
-    <ion-list id="esercenti-list">
-        <ion-item color="none" id="esercenti-list-item12" *ngFor="let esercente of esercentiArray">
-         {{esercente.nome}}  ---  Indirizzo: {{esercente.indirizzo}} 
-          <button ion-button block (click)="apriUrl(esercente.sitoWeb)">SITO</button>
-        </ion-item>
-      </ion-list>
-  </ion-content> 
+</ion-header>
+<ion-content padding id="page6">
+  <ion-list id="esercenti-list">
+      <ion-item color="none" id="esercenti-list-item12" *ngFor="let esercente of esercentiArray">
+        {{esercente.nome}}  ---  Indirizzo: {{esercente.indirizzo}} 
+        <button ion-button (click)="apriUrl(esercente.sitoWeb)">SITO</button>
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="height:40px;" id="esercenti-spacer1"></div>
+    <button ion-button color="danger" full (click)="dismiss()">Chiudi</button>
+</ion-content> 

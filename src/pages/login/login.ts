@@ -21,7 +21,7 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public alerCtrl:AlertController) {
     this.loginForm = this.formBuilder.group({
       p_email: ['', Validators.compose([Validators.required, Validators.email])],
-      p_password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
+      p_password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     });
   }
 
@@ -31,7 +31,7 @@ export class LoginPage {
   register(){
     this.submitAttempt = true;
 
-   if(!this.loginForm.valid && (this.formdata.p_password!="consis") && (this.formdata.p_email!="lucio.merre@consis.eu")){
+   if(!this.loginForm.valid || (this.formdata.p_password!="consis") || (this.formdata.p_email!="lucio.merre@consis.eu")){
       this.showAlert("Dati inseriti non corretti!");
     }
     else {
